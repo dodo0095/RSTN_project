@@ -101,6 +101,7 @@ for city_var in range(len(city_list)):
 
 
     #把json 黨輸出出來
+    df_new['交易年月日']=df_new[['交易年月日']].astype(str)
     date_data=df_new["交易年月日"].tolist()
     date_data2=list(set(date_data))
     date_data2=sorted(date_data2)

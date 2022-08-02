@@ -101,7 +101,8 @@ for city_var in range(len(city_list)):
     level[0]=0
     df["換算後的樓層數"]=level
     df2=df[['交易年月日',"鄉鎮市區",'主要用途','建物型態',"換算後的樓層數"] ].fillna(value="")
-
+    
+    df2['交易年月日']=df2[['交易年月日']].astype(str)
     
     #創出Spark得dataframe   
     sparkDF=spark.createDataFrame(df2) 
